@@ -1,0 +1,99 @@
+/* Configuración de Fondo y Fuente */
+body {
+    background: linear-gradient(180deg, #3f3044 50%, #795d96 100%);
+    background-attachment: fixed; /* Evita que el fondo se corte al hacer scroll */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor Adaptable */
+.container-main {
+    width: 100%;
+    max-width: 450px; /* Tamaño máximo para escritorio */
+}
+
+/* Efecto de Cristal (Glassmorphism) */
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h2 { 
+    font-weight: 700; 
+    margin-bottom: 25px; 
+    letter-spacing: -1px; 
+}
+
+/* Tarjeta de Saldo */
+.balance-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+}
+
+h3 { 
+    font-weight: 300; 
+    font-size: 2.8rem; 
+    margin: 0; 
+}
+
+/* Botones Personalizados */
+.btn-action {
+    background-color: #ffffff;
+    color: #3f3044;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+    text-decoration: none;
+}
+
+.btn-action:hover {
+    background-color: #f8f9fa;
+    color: #795d96;
+    transform: translateY(-3px);
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#mensaje-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* Ajustes para Dispositivos Pequeños */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 20px;
+    }
+    h3 {
+        font-size: 2.2rem;
+    }
+    .btn-action {
+        padding: 12px;
+    }
+}

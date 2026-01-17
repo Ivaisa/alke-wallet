@@ -1,0 +1,84 @@
+/* Configuración de Fondo y Fuente */
+body {
+    background: linear-gradient(180deg, #3f3044 50%, #795d96 100%);
+    background-attachment: fixed;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.14);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #3f3044;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #f8f8f8;
+    color: #795d96;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#alertContainer {
+    margin-top: 20px;
+    min-height: 50px;
+}
+
+/* Estilo para párrafo de registro */
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-footer a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.register-footer a:hover {
+    color: #f0f0f0;
+}

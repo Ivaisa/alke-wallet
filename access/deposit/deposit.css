@@ -1,0 +1,185 @@
+/* Configuración de Fondo y Fuente */
+body {
+    background: linear-gradient(180deg, #3f3044 50%, #795d96 100%);
+    background-attachment: fixed;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    min-height: 100vh;
+    /* NUEVO: Centrado absoluto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* Margen de seguridad para móviles */
+}
+
+/* Tarjeta de depósito adaptable */
+.deposit-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* Se eliminó el margin manual para que flexbox lo maneje */
+}
+
+/* Lista de Contactos Actualizada */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.contact-details {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* Botones de acción (Editar/Eliminar) */
+.contact-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+.edit-icon:hover {
+    color: #ffc107;
+}
+
+.delete-icon:hover {
+    color: #ff6b6b;
+}
+
+/* Resto de estilos originales */
+h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-info {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-control {
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #3f3044;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+    color: #795d96;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.btn-save {
+    background-color: #795d96;
+    color: white;
+    border: none;
+}
+
+.active-selection {
+    background-color: #ffffff !important;
+    color: #3f3044 !important;
+}
+
+.active-selection .contact-details {
+    color: #3f3044;
+}
+
+#transferArea,
+#successMessage {
+    display: none;
+}

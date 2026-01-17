@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Enviar Dinero</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../sendmoney/sendmoney.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Enviar Dinero</h2>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="searchContact">Buscar en la agenda:</label>
+                <input type="text" class="form-control" id="searchContact" placeholder="Nombre o Alias">
+            </div>
+        </form>
+
+        <button type="button" class="btn btn-primary btn-add" id="btnOpenAddModal">
+            + Agregar nuevo contacto
+        </button>
+
+        <h3>Contactos</h3>
+        <ul id="contactList" class="list-group">
+        </ul>
+
+        <div id="transferArea">
+            <form id="sendMoneyForm">
+                <div class="form-group mt-3">
+                    <label for="sendAmount">Monto a enviar:</label>
+                    <input type="number" class="form-control" id="sendAmount" placeholder="$ 0.00" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-send">Enviar dinero</button>
+            </form>
+        </div>
+
+        <div id="successMessage">¡Envío realizado con éxito!</div>
+        <a href="../menu/menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+    </div>
+
+    <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Nuevo Contacto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formContact">
+                        <input type="hidden" id="editIndex">
+                        <div class="form-group">
+                            <label>Nombre y Apellido</label>
+                            <input type="text" class="form-control border" id="newName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>RUT</label>
+                            <input type="text" class="form-control border" id="newRut" placeholder="12.345.678-9"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Alias</label>
+                            <input type="text" class="form-control border" id="newAlias" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre del Banco</label>
+                            <input type="text" class="form-control border" id="newBank" required>
+                        </div>
+                        <button type="submit" class="btn btn-save w-100">Guardar Contacto</button>
+                        <button type="button" class="btn btn-light w-100 mt-2" data-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../sendmoney/sendmoney.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+/* Configuración Global y Fondo */
+body {
+    background: linear-gradient(180deg, #3f3044 50%, #795d96 100%);
+    background-attachment: fixed;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Contenedor con efecto Glassmorphism */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: rgba(255, 255, 255, 0.15); 
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: -1px; }
+
+/* Filtro */
+.filter-container { margin-bottom: 20px; }
+.filter-container label { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; display: block; }
+
+.form-select {
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    height: auto;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* Lista de Movimientos */
+.list-group { 
+    margin-bottom: 25px; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    border: none;
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.monto { font-weight: 700; font-size: 1.1rem; }
+
+/* Botón Volver */
+.btn-secondary {
+    background-color: #ffffff;
+    color: #3f3044; 
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-align: center;
+    display: block;
+    text-decoration: none !important;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f8f8;
+    color: #795d96;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 480px) {
+    .container { padding: 20px; }
+    h2 { font-size: 1.5rem; }
+    .monto { font-size: 1rem; }
+    .list-group-item { padding: 12px 15px; }
+}
