@@ -16,19 +16,32 @@ body {
 .container {
     width: 100%;
     max-width: 450px;
-    background-color: rgba(255, 255, 255, 0.15); 
+    background-color: rgba(255, 255, 255, 0.13);
     padding: 30px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: -1px; }
+h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
 
 /* Filtro */
-.filter-container { margin-bottom: 20px; }
-.filter-container label { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; display: block; }
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.filter-container label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
 
 .form-select {
     border-radius: 10px;
@@ -41,10 +54,10 @@ h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: 
 }
 
 /* Lista de Movimientos */
-.list-group { 
-    margin-bottom: 25px; 
-    border-radius: 12px; 
-    overflow: hidden; 
+.list-group {
+    margin-bottom: 25px;
+    border-radius: 12px;
+    overflow: hidden;
     border: none;
 }
 
@@ -53,7 +66,7 @@ h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: 
     border: 1px solid rgba(255, 255, 255, 0.05);
     color: #ffffff;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     transition: 0.3s ease;
@@ -65,12 +78,15 @@ h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: 
     transform: translateY(-2px);
 }
 
-.monto { font-weight: 700; font-size: 1.1rem; }
+.monto {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 
 /* Botón Volver */
 .btn-secondary {
     background-color: #ffffff;
-    color: #3f3044; 
+    color: #3f3044;
     border: none;
     width: 100%;
     padding: 12px;
@@ -93,8 +109,19 @@ h2 { font-weight: 700; text-align: center; margin-bottom: 25px; letter-spacing: 
 
 /* Media Queries para dispositivos pequeños */
 @media (max-width: 480px) {
-    .container { padding: 20px; }
-    h2 { font-size: 1.5rem; }
-    .monto { font-size: 1rem; }
-    .list-group-item { padding: 12px 15px; }
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .monto {
+        font-size: 1rem;
+    }
+
+    .list-group-item {
+        padding: 12px 15px;
+    }
 }
